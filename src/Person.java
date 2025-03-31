@@ -1,18 +1,14 @@
 public class Person {
     private String name;
     private int age;
-    
-    private String address;
-    private String city;
-    
+    private Address address;
     private String phoneNumber;
     private String email;
 
-    public Person(String name, int age, String address, String city, String phoneNumber, String email) {
+    public Person(String name, int age, Address address, String phoneNumber, String email) {
         this.name = name;
         this.age = age;
         this.address = address;
-        this.city = city;
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
@@ -22,7 +18,7 @@ public class Person {
     }
 
     public void printAddress() {
-        System.out.println("Address: " + address + ", City: " + city);
+        address.printAddress();
     }
 
     public void printContactDetails() {
